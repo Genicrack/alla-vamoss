@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Allá Vamos Viajes y Turismo</title>
+<style>
+:root{
+  --bg:#000; --fg:#f5f5f5; --muted:#bdbdbd; --accent:#e67e22; --ok:#25d366;
+  --card:#101010; --line:#1a1a1a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:#ddd;text-decoration:none}
+a:hover{color:#fff}
+nav{position:sticky;top:0;background:rgba(0,0,0,.8);padding:10px 0;border-bottom:1px solid var(--line);z-index:100}
+nav .wrap{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero{min-height:60vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.55)),url('img/hero.jpg') center/cover no-repeat;text-align:center;padding:20px}
+.hero h1{font-size:clamp(26px,5vw,46px)}
+.hero p{color:var(--muted);margin:10px 0 20px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 18px;border-radius:8px;font-weight:700}
+.btn.ok{background:var(--ok)}
+.wrap{max-width:1100px;margin:auto;padding:20px}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{margin-bottom:14px;font-size:clamp(20px,3vw,28px)}
+.sub{color:var(--muted);margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.card .body{padding:12px}
+.price{font-weight:700}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse}
+thead{background:#161616}
+th,td{padding:10px;border-bottom:1px solid #121212;text-align:left}
+td.r,th.r{text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+figure{margin:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#0a0a0a}
+figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
+figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.55);padding:6px 10px;border-radius:8px;font-weight:600;color:#eee}
+footer{padding:18px 0;color:#a7a7a7;text-align:center}
+.badge{background:#151515;border:1px solid #222;border-radius:999px;padding:6px 10px;color:#bbb;font-size:.92em;display:inline-block;margin:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#inicio">Inicio</a>
+    <a href="#porque">Por qué elegirnos</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#paquete">Paquete destacado</a>
+    <a href="#galeria">Galería</a>
+    <a href="#reservar">Reservar</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <h1>Allá Vamos Viajes y Turismo</h1>
+  <p>Tu aventura comienza aquí</p>
+  <a class="btn" href="#catalogo">Ver paquetes</a>
+</header>
+
+<main class="wrap">
+
+<section id="porque">
+  <h2>Por qué elegirnos</h2>
+  <p class="sub">Experiencias claras, simples y confiables</p>
+  <ul>
+    <li><strong>Personalización real:</strong> fechas, hotel y régimen a tu medida.</li>
+    <li><strong>Transparencia:</strong> precios claros y totales por pax y por 2 pax.</li>
+    <li><strong>Acompañamiento 24/7:</strong> soporte por WhatsApp durante el viaje.</li>
+    <li><strong>Hoteles curados:</strong> buena ubicación y reputación.</li>
+  </ul>
+</section>
+
+<section id="catalogo">
+  <h2>Catálogo</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Salida</th><th>Hotel</th><th>Pensión</th><th class="r">Precio x Pax</th><th class="r">Total x 2 pax</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>04/01/2026</td><td>Aqua Inn</td><td>Desayuno</td><td class="r">USD 1.456,00</td><td class="r">USD 2.554,00</td></tr>
+        <tr><td>15/02/2026</td><td>Aqua Inn</td><td>Desayuno</td><td class="r">USD 1.374,00</td><td class="r">USD 2.398,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="paquete">
+  <h2>Maceió — Aqua Inn</h2>
+  <p class="sub">Desayuno incluido • A 200 m del mar</p>
+  <div class="cards">
+    <div class="card">
+      <img src="img/maceio-aquainn.jpg" alt="Aqua Inn en Maceió">
+      <div class="body">
+        <p class="price">Desde USD 1.145 por persona (fechas seleccionadas)</p>
+        <span class="badge">Wi‑Fi</span><span class="badge">Desayuno</span><span class="badge">Cerca del mar</span>
+      </div>
+    </div>
+  </div>
+  <h3>Itinerario sugerido</h3>
+  <ul>
+    <li>Día 1: Llegada y descanso en la playa</li>
+    <li>Día 2: City tour</li>
+    <li>Día 3: Excursión opcional</li>
+    <li>Día 4: Libre</li>
+    <li>Día 5: Piscinas naturales</li>
+    <li>Día 6: Compras</li>
+    <li>Día 7: Playa y atardecer</li>
+    <li>Día 8: Salida</li>
+  </ul>
+</section>
+
+<section id="galeria">
+  <h2>Galería</h2>
+  <div class="grid">
+    <figure><img src="img/gal-1.jpg" alt="Playa"><figcaption>Maceió</figcaption></figure>
+    <figure><img src="img/gal-2.jpg" alt="Hotel"><figcaption>Hotel Aqua Inn</figcaption></figure>
+    <figure><img src="img/gal-3.jpg" alt="Excursión"><figcaption>Excursión local</figcaption></figure>
+  </div>
+</section>
+
+<section id="reservar">
+  <
